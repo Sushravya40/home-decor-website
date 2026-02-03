@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Home Decor</title>
+    <link href="common.css" rel="stylesheet">
+    <link href="products.css" rel="stylesheet">
+    <style>
+        .detail-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            display: flex;
+            gap: 40px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .detail-img {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .detail-img img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .detail-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .detail-title {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .detail-price {
+            font-size: 24px;
+            color: #E8B4A0;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .detail-desc {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .buy-now {
+            padding: 12px 25px;
+            background-color: #E8B4A0;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .back-btn {
+            padding: 12px 25px;
+            background-color: transparent;
+            border: 1px solid #555;
+            color: #555;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .detail-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="homediv">
+            <div class="lag">
+                <p><b>𝐻𝑜𝓂𝑒𝒟𝑒𝒸𝑜𝓇</b></p>
+            </div>
+            <div class="menu">
+                <a class="divv" href="homepage.html">Home</a>
+                <a class="divv" href="categories.html">Categories</a>
+                <a class="divv" href="products.html">Product</a>
+                <a class="divv" href="about.html">About</a>
+                <a class="divv" href="contact.html">Contact</a>
+                <a class="divv" id="sign" href="loginpage.html">Sign In</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="detail-container">
+        <div class="detail-img">
+            <img src="../media/sofa.png" alt="Product Image">
+        </div>
+        <div class="detail-info">
+            <h1 class="detail-title">Modern Beige Sofa</h1>
+            <p class="detail-price">₹45,000</p>
+            <p class="detail-desc">
+                Experience ultimate comfort with this meticulously crafted piece.
+                Designed to blend perfectly with modern interiors, it features premium fabric,
+                durable construction, and a timeless aesthetic that elevates any room.
+            </p>
+            <div class="action-buttons">
+                <button class="buy-now" onclick="alert('Added to Cart!')">Add to Cart</button>
+                <a href="products.html" class="back-btn">Back to Products</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="foot">
+        <div class="foordiv">
+            <p>@ Made with Love</p>
+        </div>
+    </footer>
+</body>
+
+</html>
