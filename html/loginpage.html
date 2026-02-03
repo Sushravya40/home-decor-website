@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Home Decor</title>
+    <link href="common.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Optional: Includes Navbar if you want navigation on login page too, 
+         but often login pages differ. I'll add a simple home link instead. -->
+
+    <div class="login-wrapper">
+        <form class="container">
+            <h2>Welcome Back</h2>
+
+            <div class="input-group">
+                <label for="name">Username</label>
+                <input type="text" class="input" name="name" id="name" placeholder="Enter Username" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" class="input" name="password" id="password" placeholder="Enter Password"
+                    pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[&%$#@!])[A-Za-z\d&%$#@!]{8,}$" required>
+            </div>
+
+            <div class="cmt">
+                <strong>Password Requirements:</strong>
+                <ul>
+                    <li>Min 8 characters</li>
+                    <li>One uppercase & lowercase</li>
+                    <li>One digit & special char</li>
+                </ul>
+            </div>
+
+            <div class="actions">
+                <a href="homepage.html" class="back-link">← Back to Home</a>
+                <button type="submit" class="submit-btn" onclick="alert('Login Simulated'); return false;">Sign
+                    In</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

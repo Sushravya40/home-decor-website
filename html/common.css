@@ -1,0 +1,92 @@
+/* Basic Resets & Fonts */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #FFF8F2;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+}
+
+/* Navigation Bar */
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #5E5E5E;
+    color: aliceblue;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.homediv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 40px;
+}
+
+.lag p {
+    font-size: 23px;
+    font-style: italic; 
+    /* Kept italic for logo as per original design */
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.divv {
+    padding: 8px 12px;
+    color: white;
+    font-weight: 500;
+}
+
+.divv:hover {
+    color: #E8B4A0;
+}
+
+#sign {
+    border: 2px solid whitesmoke;
+    background-color: #E8B4A0;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: white;
+}
+
+#sign:hover {
+    background-color: whitesmoke;
+    color: #E8B4A0;
+    border-color: #E8B4A0;
+}
+
+/* Footer Section */
+.foot {
+    background-color: #3E3E3E;
+    color: aliceblue;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto; /* Pushes footer to bottom */
+    border-top: 2px solid white;
+}
+
+.foordiv p {
+    margin: 0;
+}
