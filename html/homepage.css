@@ -1,18 +1,18 @@
 /* Homepage Specific Styles */
 
-/* 
-   Video was removed due to GitHub size limits. 
-   Using a background image instead.
-*/
 body {
-  background: url('../media/bacweb22.png') no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
+  /* Background handled by video now */
+  background-color: #FFF8F2;
 }
 
 #bg-video {
-  display: none;
-  /* Hide the missing video */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
 }
 
 /* Hero Section */
@@ -26,8 +26,8 @@ body {
   color: white;
   text-align: center;
   padding: 0 20px;
-  background: rgba(0, 0, 0, 0.4);
-  /* Darker overlay for better text contrast */
+  background: rgba(0, 0, 0, 0.3);
+  /* Adds overlay for better text readability */
 }
 
 .hero h1 {
