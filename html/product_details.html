@@ -106,6 +106,7 @@
                 <a class="divv" href="products.html">Product</a>
                 <a class="divv" href="about.html">About</a>
                 <a class="divv" href="contact.html">Contact</a>
+                <a class="divv" href="cart.html">Cart</a>
                 <a class="divv" id="sign" href="loginpage.html">Sign In</a>
             </div>
         </div>
@@ -113,22 +114,54 @@
 
     <div class="detail-container">
         <div class="detail-img">
-            <img src="../media/sofa.png" alt="Product Image">
+            <img id="p-img" src="../media/sofa.png" alt="Product Image">
         </div>
         <div class="detail-info">
-            <h1 class="detail-title">Modern Beige Sofa</h1>
-            <p class="detail-price">₹45,000</p>
-            <p class="detail-desc">
+            <h1 id="p-title" class="detail-title">Modern Beige Sofa</h1>
+            <p id="p-price" class="detail-price">₹45,000</p>
+            <p id="p-desc" class="detail-desc">
                 Experience ultimate comfort with this meticulously crafted piece.
                 Designed to blend perfectly with modern interiors, it features premium fabric,
                 durable construction, and a timeless aesthetic that elevates any room.
             </p>
             <div class="action-buttons">
-                <button class="buy-now" onclick="alert('Added to Cart!')">Add to Cart</button>
+                <button class="buy-now" id="add-to-cart-btn">Add to Cart</button>
                 <a href="products.html" class="back-btn">Back to Products</a>
             </div>
         </div>
     </div>
+
+    <!-- Script to handle dynamic URL params and Cart Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const title = params.get('title');
+            const price = params.get('price');
+            const img = params.get('img');
+            const desc = params.get('desc'); // Optional custom description
+
+            if (title) document.getElementById('p-title').innerText = title;
+            if (price) document.getElementById('p-price').innerText = price;
+            if (img) document.getElementById('p-img').src = img;
+            if (desc) document.getElementById('p-desc').innerText = desc;
+
+            document.getElementById('add-to-cart-btn').addEventListener('click', () => {
+                const product = {
+                    title: document.getElementById('p-title').innerText,
+                    price: document.getElementById('p-price').innerText,
+                    img: document.getElementById('p-img').getAttribute('src') // get absolute/relative path as is
+                };
+
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.push(product);
+                localStorage.setItem('cart', JSON.stringify(cart));
+
+                if (confirm('Item added to cart! Go to cart?')) {
+                    window.location.href = 'cart.html';
+                }
+            });
+        });
+    </script>
 
     <footer class="foot">
         <div class="foordiv">
