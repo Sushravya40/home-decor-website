@@ -1,20 +1,23 @@
 /* Homepage Specific Styles */
 
+/* 
+   Video was removed due to GitHub size limits. 
+   Using a background image instead.
+*/
+body {
+  background: url('../media/bacweb22.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 #bg-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -2;
-  /* Pushed further back */
+  display: none;
+  /* Hide the missing video */
 }
 
 /* Hero Section */
 .hero {
   position: relative;
-  /* Removed z-index: -1 so it sits above video but below nav */
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -23,8 +26,8 @@
   color: white;
   text-align: center;
   padding: 0 20px;
-  background: rgba(0, 0, 0, 0.3);
-  /* Adds overlay for better text readability */
+  background: rgba(0, 0, 0, 0.4);
+  /* Darker overlay for better text contrast */
 }
 
 .hero h1 {
@@ -44,7 +47,6 @@
   padding: 12px 30px;
   background: #E8B4A0;
   color: white;
-  /* Explicit text color */
   border: none;
   border-radius: 5px;
   font-size: 18px;
