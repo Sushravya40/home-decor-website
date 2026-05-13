@@ -21,13 +21,12 @@
                 <a class="divv" href="products.html">Product</a>
                 <a class="divv" href="about.html">About</a>
                 <a class="divv" href="contact.html">Contact</a>
-                <a class="divv" href="cart.html">Cart</a>
                 <a class="divv" id="sign" href="loginpage.html">Sign In</a>
             </div>
         </div>
     </nav>
 
-    <video autoplay="autoplay" muted="muted" loop="loop" playsinline preload="auto" id="bg-video">
+    <video autoplay muted loop id="bg-video">
         <source src="../media/website.mp4" type="video/mp4">
         <!-- Fallback if video fails/missing -->
         Your browser does not support HTML5 video.
@@ -44,19 +43,6 @@
             <p>@ Made with Love</p>
         </div>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const video = document.getElementById('bg-video');
-            if (video) {
-                // Ensure it's muted to allow autoplay in all browsers
-                video.muted = true;
-                video.play().catch(error => {
-                    console.log("Autoplay was prevented by browser policy:", error);
-                    // Optionally, could add a "Play Video" button here if browser strictly blocks it
-                });
-            }
-        });
-    </script>
 </body>
 
 </html>
