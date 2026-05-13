@@ -133,7 +133,7 @@
     <div class="profile-container">
         <div class="avatar">U</div>
         <h2 class="profile-name">Welcome, User!</h2>
-        <p class="profile-email">user@example.com</p>
+        <p class="profile-email" id="profile-email-text">user@example.com</p>
 
         <div class="profile-stats">
             <div class="stat-box">
@@ -163,9 +163,12 @@
                 window.location.href = 'loginpage.html';
             }
 
-            // Load username
+            // Load username & email
             const uname = localStorage.getItem('username') || 'User';
+            const email = localStorage.getItem('email') || 'user@example.com';
+            
             document.querySelector('.profile-name').innerText = 'Welcome, ' + uname + '!';
+            document.getElementById('profile-email-text').innerText = email;
             document.querySelector('.avatar').innerText = uname.charAt(0).toUpperCase();
 
             // Load actual cart stat
