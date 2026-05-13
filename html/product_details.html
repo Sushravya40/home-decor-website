@@ -9,25 +9,38 @@
     <link href="products.css" rel="stylesheet">
     <style>
         .detail-container {
-            max-width: 1000px;
-            margin: 50px auto;
-            padding: 20px;
+            max-width: 1100px;
+            margin: 80px auto;
+            padding: 40px;
             display: flex;
-            gap: 40px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            gap: 60px;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            animation: fadeIn 0.8s ease-out;
+            border: 1px solid rgba(0,0,0,0.05);
         }
 
         .detail-img {
             flex: 1;
             max-width: 500px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            background: #fafafa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .detail-img img {
             width: 100%;
             height: auto;
-            border-radius: 8px;
+            transition: transform 0.5s ease;
+        }
+
+        .detail-img:hover img {
+            transform: scale(1.05);
         }
 
         .detail-info {
@@ -38,57 +51,81 @@
         }
 
         .detail-title {
-            font-size: 32px;
-            margin-bottom: 10px;
-            color: #333;
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: var(--text-main);
+            font-weight: 700;
         }
 
         .detail-price {
-            font-size: 24px;
-            color: #E8B4A0;
-            margin-bottom: 20px;
-            font-weight: bold;
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 25px;
+            font-weight: 700;
         }
 
         .detail-desc {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 30px;
-            line-height: 1.6;
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            line-height: 1.8;
         }
 
         .action-buttons {
             display: flex;
-            gap: 15px;
+            gap: 20px;
         }
 
         .buy-now {
-            padding: 12px 25px;
-            background-color: #E8B4A0;
-            color: white;
+            padding: 16px 35px;
+            background-color: var(--primary);
+            color: var(--white);
             border: none;
-            border-radius: 4px;
-            font-size: 16px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 600;
             cursor: pointer;
             text-decoration: none;
             text-align: center;
+            transition: var(--transition);
+            box-shadow: 0 10px 20px rgba(212, 163, 115, 0.3);
+        }
+
+        .buy-now:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(212, 163, 115, 0.4);
         }
 
         .back-btn {
-            padding: 12px 25px;
+            padding: 16px 35px;
             background-color: transparent;
-            border: 1px solid #555;
-            color: #555;
-            border-radius: 4px;
-            font-size: 16px;
+            border: 2px solid var(--text-main);
+            color: var(--text-main);
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 600;
             cursor: pointer;
             text-decoration: none;
             text-align: center;
+            transition: var(--transition);
+        }
+
+        .back-btn:hover {
+            background-color: var(--text-main);
+            color: var(--white);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @media (max-width: 768px) {
             .detail-container {
                 flex-direction: column;
+                padding: 20px;
+                gap: 30px;
             }
         }
     </style>
