@@ -39,11 +39,12 @@
 
             <div class="actions">
                 <a href="homepage.html" class="back-link">← Back to Home</a>
-                <button type="button" class="submit-btn" onclick="window.location.href='homepage.html'">Sign In</button>
+                <button type="button" class="submit-btn" onclick="localStorage.setItem('isLoggedIn', 'true'); window.location.href='homepage.html'">Sign In</button>
             </div>
         </form>
     </div>
 
+    <script src="common.js"></script>
 </body>
 
 </html>
