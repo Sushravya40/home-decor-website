@@ -163,6 +163,11 @@
                 window.location.href = 'loginpage.html';
             }
 
+            // Load username
+            const uname = localStorage.getItem('username') || 'User';
+            document.querySelector('.profile-name').innerText = 'Welcome, ' + uname + '!';
+            document.querySelector('.avatar').innerText = uname.charAt(0).toUpperCase();
+
             // Load actual cart stat
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
             document.getElementById('cart-stat').innerText = cart.length;
